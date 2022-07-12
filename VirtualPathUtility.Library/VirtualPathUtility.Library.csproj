@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;netstandard2.0;net472</TargetFrameworks>
+    <LangVersion>10.0</LangVersion>
+    <ImplicitUsings>false</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="**/*" Condition="'$(TargetFramework)'!='net6.0'" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)'=='net472'">
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  
+  <ItemGroup Condition="'$(TargetFramework)'=='net6.0'">
+    <EmbeddedResource Update="net6.0\VirtualPathUtilityErrors.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>VirtualPathUtilityErrors.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>System.Web</CustomToolNamespace>
+    </EmbeddedResource>
+    <Compile Update="net6.0\VirtualPathUtilityErrors.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>VirtualPathUtilityErrors.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

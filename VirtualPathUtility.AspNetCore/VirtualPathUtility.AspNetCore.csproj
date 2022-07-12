@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\VirtualPathUtility.Library\VirtualPathUtility.Library.csproj" />
+    <ProjectReference Include="..\VirtualPathUtility.Tests\VirtualPathUtility.Tests.csproj" />
+  </ItemGroup>
+
+</Project>
