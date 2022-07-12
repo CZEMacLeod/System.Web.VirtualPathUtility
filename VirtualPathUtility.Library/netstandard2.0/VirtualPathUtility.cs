@@ -1,6 +1,9 @@
 ﻿namespace System.Web;
 
 #if NETSTANDARD2_0
+/// <summary>
+/// Provides utility methods for common virtual path operations.
+/// </summary>
 public static class VirtualPathUtility
 {
 	private const string PlatformError = "Only supported when running on ASP.NET Core or System.Web";

@@ -5,6 +5,16 @@ using System.Text;
 namespace System.Web;
 
 #if NET6_0_OR_GREATER
+
+/// <summary>
+/// Provides utility methods for common virtual path operations.
+/// </summary>
+/// <remarks>
+/// Portions of this code are based on code originally Copyright (c) 1999 Microsoft Corporation
+/// System.Web.Util.UrlPath code at https://github.com/microsoft/referencesource/blob/master/System.Web/Util/UrlPath.cs
+/// System.Web.Util.StringUtil at https://github.com/microsoft/referencesource/blob/master/System.Web/Util/StringUtil.cs
+/// These files are released under an MIT licence according to https://github.com/microsoft/referencesource#license
+/// </remarks>
 public static class VirtualPathUtility
 {
 
